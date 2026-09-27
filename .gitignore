@@ -1,0 +1,6 @@
+lab1_test/
+**/bin/
+*.o
+*.swp
+*.swo
+__pycache__/
