@@ -1,0 +1,656 @@
+code/02_autovec.cpp:47:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:47:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:46:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:50:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:50:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:37:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:37:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:36:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:42:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:42:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:27:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:27:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:26:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:32:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:32:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:19:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _6 = *_5;
+ scalar_type: float
+code/02_autovec.cpp:18:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:22:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:22:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:11:26: optimized: loop vectorized using 32 byte vectors
+code/02_autovec.cpp:9:6: note: vectorized 1 loops in function.
+code/02_autovec.cpp:14:1: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_algo.h:1817:57: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1817:57: missed: not vectorized: control flow in loop.
+/usr/include/c++/13/bits/stl_algo.h:1799:20: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1799:20: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/c++/13/bits/stl_algo.h:1812:5: note: vectorized 0 loops in function.
+/usr/include/c++/13/bits/stl_algobase.h:748:23: missed: statement clobbers memory: __builtin_memmove (_30, __first_1, _28);
+/usr/include/c++/13/bits/stl_algo.h:1817:57: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/stl_algo.h:1817:57: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/stl_heap.h:422:31: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_heap.h:422:31: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+/usr/include/c++/13/bits/stl_iterator.h:1148:47: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_iterator.h:1148:47: missed: not vectorized: control flow in loop.
+/usr/include/c++/13/bits/stl_heap.h:229:28: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_heap.h:229:28: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/c++/13/bits/stl_heap.h:229:28: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/stl_heap.h:229:28: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/stl_heap.h:358:4: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_heap.h:358:4: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+/usr/include/c++/13/bits/stl_iterator.h:1148:47: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_iterator.h:1148:47: missed: not vectorized: control flow in loop.
+/usr/include/c++/13/bits/stl_heap.h:229:28: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_heap.h:229:28: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/c++/13/bits/stl_heap.h:229:28: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/stl_heap.h:229:28: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/stl_algo.h:1929:4: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1929:4: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+/usr/include/c++/13/bits/stl_algo.h:1882:4: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1882:4: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+/usr/include/c++/13/bits/stl_algo.h:1880:17: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1880:17: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/c++/13/bits/stl_algo.h:1877:17: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1877:17: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/c++/13/bits/stl_algo.h:1918:5: note: vectorized 0 loops in function.
+/usr/include/c++/13/bits/stl_algo.h:1932:25: missed: statement clobbers memory: std::__introsort_loop.isra (__cut, __last, __depth_limit_4);
+/usr/include/c++/13/bits/move.h:198:11: note: ***** Analysis succeeded with vector mode V4DI
+/usr/include/c++/13/bits/move.h:198:11: note: SLPing BB part
+/usr/include/c++/13/bits/move.h:198:11: note: Costing subgraph: 
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091ac8 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 MEM[(double &)__first_325 + 8] = pretmp_528;
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091c48
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091c48 (max_nunits=1, refcnt=3) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op: VEC_PERM_EXPR
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: 	lane permutation { 0[1] 0[0] }
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091b48
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091b48 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091bc8 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 MEM[(double &)__first_325 + 8] = pretmp_528;
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091c48
+/usr/include/c++/13/bits/move.h:198:11: note: Cost model analysis: 
+/usr/include/c++/13/bits/move.h:198:11: note: Cost model analysis for part in loop 1:
+  Vector cost: 68
+  Scalar cost: 96
+/usr/include/c++/13/bits/move.h:198:11: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/move.h:198:11: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091ac8 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 MEM[(double &)__first_325 + 8] = pretmp_528;
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091c48
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091c48 (max_nunits=1, refcnt=3) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op: VEC_PERM_EXPR
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: 	lane permutation { 0[1] 0[0] }
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091b48
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091b48 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: ------>vectorizing SLP node starting from: _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: transform load. ncopies = 1
+/usr/include/c++/13/bits/move.h:198:11: note: create vector_type-pointer variable to type: vector(2) double  vectorizing a pointer ref: MEM[(double &)__first_325 + 8]
+/usr/include/c++/13/bits/move.h:198:11: note: created vectp.549_61
+/usr/include/c++/13/bits/move.h:198:11: note: add new stmt: vectp.549_62 = vectp.549_61 + 18446744073709551608;
+/usr/include/c++/13/bits/move.h:198:11: note: add new stmt: vect__251.550_63 = MEM <vector(2) double> [(type &)vectp.549_62];
+/usr/include/c++/13/bits/move.h:198:11: note: extracting lane for live stmt pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: extracting lane for live stmt _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: ------>vectorizing SLP node starting from: _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: vectorizing permutation op0[1] op0[0] (repeat 2)
+
+/usr/include/c++/13/bits/move.h:198:11: note: vectorizing permutation op0[1] op0[0] (repeat 2)
+
+/usr/include/c++/13/bits/move.h:198:11: note: as vops0[0][1] vops0[0][0], vops0[0][3] vops0[0][2], vops0[0][5] vops0[0][4]
+/usr/include/c++/13/bits/move.h:198:11: note: add new stmt: _66 = VEC_PERM_EXPR <vect__251.550_63, vect__251.550_63, { 1, 0 }>;
+/usr/include/c++/13/bits/move.h:198:11: note: extracting lane for live stmt _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: extracting lane for live stmt pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: ------>vectorizing SLP node starting from: *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: vect_is_simple_use: operand MEM[(double &)__first_325 + 8], type of def: internal
+/usr/include/c++/13/bits/move.h:198:11: note: vect_is_simple_use: operand MEM[(type &)__first_325], type of def: internal
+/usr/include/c++/13/bits/move.h:198:11: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/move.h:198:11: note: create vector_type-pointer variable to type: vector(2) double  vectorizing a pointer ref: *__first_325
+/usr/include/c++/13/bits/move.h:198:11: note: created vectp.552_69
+/usr/include/c++/13/bits/move.h:198:11: note: add new stmt: MEM <vector(2) double> [(double &)vectp.552_69] = _66;
+/usr/include/c++/13/bits/move.h:198:11: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/move.h:198:11: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091bc8 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 MEM[(double &)__first_325 + 8] = pretmp_528;
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091c48
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091c48 (max_nunits=1, refcnt=3) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op: VEC_PERM_EXPR
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: 	lane permutation { 0[1] 0[0] }
+/usr/include/c++/13/bits/move.h:198:11: note: 	children 0x9091b48
+/usr/include/c++/13/bits/move.h:198:11: note: node 0x9091b48 (max_nunits=2, refcnt=1) vector(2) double
+/usr/include/c++/13/bits/move.h:198:11: note: op template: _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 0 pretmp_528 = MEM[(type &)__first_325];
+/usr/include/c++/13/bits/move.h:198:11: note: 	stmt 1 _251 = MEM[(double &)__first_325 + 8];
+/usr/include/c++/13/bits/move.h:198:11: note: ------>vectorizing SLP node starting from: *__first_325 = _251;
+/usr/include/c++/13/bits/move.h:198:11: note: vect_is_simple_use: operand MEM[(double &)__first_325 + 8], type of def: internal
+/usr/include/c++/13/bits/move.h:198:11: note: vect_is_simple_use: operand MEM[(type &)__first_325], type of def: internal
+/usr/include/c++/13/bits/move.h:198:11: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/move.h:198:11: note: create vector_type-pointer variable to type: vector(2) double  vectorizing a pointer ref: *__first_325
+/usr/include/c++/13/bits/move.h:198:11: note: created vectp.554_70
+/usr/include/c++/13/bits/move.h:198:11: note: add new stmt: MEM <vector(2) double> [(double &)vectp.554_70] = _66;
+/usr/include/c++/13/bits/move.h:198:11: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/move.h:198:11: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/move.h:198:11: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/stl_algo.h:1839:53: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1839:53: missed: not vectorized: control flow in loop.
+/usr/include/c++/13/bits/stl_algo.h:1799:20: missed: couldn't vectorize loop
+/usr/include/c++/13/bits/stl_algo.h:1799:20: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/c++/13/bits/stl_algo.h:1942:5: note: vectorized 0 loops in function.
+/usr/include/c++/13/bits/stl_algo.h:1947:25: missed: statement clobbers memory: std::__introsort_loop.isra (__first, __last, _10);
+/usr/include/c++/13/bits/stl_algo.h:1942:5: missed: not vectorized: more than one data ref in stmt: __first = __first;
+/usr/include/c++/13/bits/stl_algo.h:1942:5: missed: not vectorized: more than one data ref in stmt: __last = __last;
+/usr/include/c++/13/bits/stl_algo.h:1864:23: missed: statement clobbers memory: std::__insertion_sort.isra (__first, __last);
+/usr/include/c++/13/bits/stl_algo.h:1859:25: missed: statement clobbers memory: std::__insertion_sort.isra (__first, D.174524);
+/usr/include/c++/13/bits/stl_algo.h:1952:5: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/stl_algo.h:1952:5: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+code/02_autovec.cpp:11:26: optimized: loop vectorized using 32 byte vectors
+code/02_autovec.cpp:11:26: optimized: loop vectorized using 16 byte vectors
+code/02_autovec.cpp:9:6: note: vectorized 1 loops in function.
+code/02_autovec.cpp:9:6: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:9:6: note: ***** The result for vector mode V32QI would be the same
+code/02_autovec.cpp:9:6: note: ***** Re-trying analysis with vector mode V16QI
+code/02_autovec.cpp:9:6: note: ***** Analysis failed with vector mode V16QI
+code/02_autovec.cpp:9:6: note: ***** Re-trying analysis with vector mode V8QI
+code/02_autovec.cpp:9:6: note: ***** Analysis failed with vector mode V8QI
+code/02_autovec.cpp:9:6: note: ***** Re-trying analysis with vector mode V4QI
+code/02_autovec.cpp:9:6: note: ***** Analysis failed with vector mode V4QI
+code/02_autovec.cpp:19:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _4 = *_3;
+ scalar_type: float
+code/02_autovec.cpp:18:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:22:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:22:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:27:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:27:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:26:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:32:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:32:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:37:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:37:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:36:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:42:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:42:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:47:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:47:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:46:6: note: vectorized 0 loops in function.
+code/02_autovec.cpp:50:1: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:50:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_7, _15);
+/usr/include/c++/13/bits/stl_vector.h:738:7: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/stl_vector.h:738:7: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_7, _15);
+/usr/include/c++/13/bits/stl_vector.h:738:7: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/stl_vector.h:738:7: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+code/bench.h:13:49: missed: couldn't vectorize loop
+code/bench.h:13:49: missed: not vectorized: control flow in loop.
+code/bench.h:14:27: missed: couldn't vectorize loop
+code/02_autovec.cpp:66:52: missed: statement clobbers memory: conditional_select.constprop (_478, _476);
+code/bench.h:13:49: missed: couldn't vectorize loop
+code/bench.h:13:49: missed: not vectorized: control flow in loop.
+code/bench.h:14:27: missed: couldn't vectorize loop
+code/02_autovec.cpp:65:54: missed: statement clobbers memory: conditional_restrict.constprop (_398, _396);
+code/bench.h:13:49: missed: couldn't vectorize loop
+code/bench.h:13:49: missed: not vectorized: control flow in loop.
+code/bench.h:14:27: missed: couldn't vectorize loop
+code/02_autovec.cpp:63:57: missed: statement clobbers memory: conditional_vectorizable.constprop (_318, _316);
+code/bench.h:13:49: missed: couldn't vectorize loop
+code/bench.h:13:49: missed: not vectorized: control flow in loop.
+code/bench.h:14:27: missed: couldn't vectorize loop
+code/02_autovec.cpp:62:57: missed: statement clobbers memory: non_vectorizable_example.constprop (_238, _236);
+code/bench.h:13:49: missed: couldn't vectorize loop
+code/bench.h:13:49: missed: not vectorized: control flow in loop.
+code/bench.h:14:27: missed: couldn't vectorize loop
+code/02_autovec.cpp:61:53: missed: statement clobbers memory: vectorizable_example.constprop (_180, _178, _176);
+code/02_autovec.cpp:55:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:56:14: missed: not vectorized: no vectype for stmt: *_76 = iftmp.1_15;
+ scalar_type: value_type
+code/02_autovec.cpp:55:26: note: ***** Analysis failed with vector mode V8SF
+code/02_autovec.cpp:55:26: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF
+code/02_autovec.cpp:52:5: note: vectorized 0 loops in function.
+code/02_autovec.cpp:52:5: missed: splitting region at control altering definition _118 = operator new (16384);
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: statement clobbers memory: _101 = operator new (16384);
+/usr/include/c++/13/bits/stl_algobase.h:931:11: missed: statement clobbers memory: __builtin_memset (__first_102, 0, 16380);
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _118 = operator new (16384);
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ***** Analysis succeeded with vector mode V4DI
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: SLPing BB part
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Costing subgraph: 
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node 0x921d7e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: op template: MEM[(struct _Vector_impl_data *)&b]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 0 MEM[(struct _Vector_impl_data *)&b]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 1 MEM[(struct _Vector_impl_data *)&b]._M_end_of_storage = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	children 0x921d868
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node (constant) 0x921d868 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	{ 0B, 0B }
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Cost model analysis: 
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Cost model analysis for part in loop 0:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node 0x921d7e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: op template: MEM[(struct _Vector_impl_data *)&b]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 0 MEM[(struct _Vector_impl_data *)&b]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 1 MEM[(struct _Vector_impl_data *)&b]._M_end_of_storage = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	children 0x921d868
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node (constant) 0x921d868 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	{ 0B, 0B }
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ------>vectorizing SLP node starting from: MEM[(struct _Vector_impl_data *)&b]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: vect_is_simple_use: operand 0B, type of def: constant
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: MEM[(struct _Vector_impl_data *)&b]._M_finish
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: created &MEM[(struct _Vector_impl_data *)&b]._M_finish
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: add new stmt: MEM <vector(2) long unsigned int> [(float * *)&b + 8B] = { 0, 0 };
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/stl_vector.h:100:16: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/stl_vector.h:100:16: missed: splitting region at dominance boundary bb5
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:100:16: missed: splitting region at control altering definition _139 = operator new (16384);
+/usr/include/c++/13/bits/stl_algobase.h:931:11: missed: statement clobbers memory: __builtin_memset (__first_119, 0, 16380);
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _139 = operator new (16384);
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ***** Analysis succeeded with vector mode V4DI
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: SLPing BB part
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Costing subgraph: 
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node 0x921d7e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: op template: MEM[(struct _Vector_impl_data *)&c]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 0 MEM[(struct _Vector_impl_data *)&c]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 1 MEM[(struct _Vector_impl_data *)&c]._M_end_of_storage = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	children 0x921d868
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node (constant) 0x921d868 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	{ 0B, 0B }
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Cost model analysis: 
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Cost model analysis for part in loop 0:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node 0x921d7e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: op template: MEM[(struct _Vector_impl_data *)&c]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 0 MEM[(struct _Vector_impl_data *)&c]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	stmt 1 MEM[(struct _Vector_impl_data *)&c]._M_end_of_storage = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	children 0x921d868
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: node (constant) 0x921d868 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: 	{ 0B, 0B }
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ------>vectorizing SLP node starting from: MEM[(struct _Vector_impl_data *)&c]._M_finish = 0B;
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: vect_is_simple_use: operand 0B, type of def: constant
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: MEM[(struct _Vector_impl_data *)&c]._M_finish
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: created &MEM[(struct _Vector_impl_data *)&c]._M_finish
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: add new stmt: MEM <vector(2) long unsigned int> [(float * *)&c + 8B] = { 0, 0 };
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/stl_vector.h:100:16: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/stl_vector.h:100:16: missed: splitting region at dominance boundary bb8
+/usr/include/c++/13/bits/stl_vector.h:100:16: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:100:16: missed: splitting region at control altering definition _229 = operator new (_228);
+/usr/include/c++/13/bits/stl_algobase.h:931:11: missed: statement clobbers memory: __builtin_memset (__first_140, 0, 16380);
+code/02_autovec.cpp:61:53: missed: statement clobbers memory: vectorizable_example.constprop (_101, _118, _139);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _139 : "memory");
+code/bench.h:13:49: missed: statement clobbers memory: t0 = std::chrono::_V2::steady_clock::now ();
+code/02_autovec.cpp:61:53: missed: statement clobbers memory: vectorizable_example.constprop (_180, _178, _176);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _176 : "memory");
+code/bench.h:15:49: missed: statement clobbers memory: t1 = std::chrono::_V2::steady_clock::now ();
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _229 = operator new (_228);
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb29
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb20
+/usr/include/c++/13/bits/stl_uninitialized.h:1131:21: missed: statement clobbers memory: __builtin_memmove (iftmp.14_195, _211, _194);
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_211, _230);
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** Analysis succeeded with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:521:30: note: SLPing BB part
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Costing subgraph: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d868 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_195;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_195;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _220;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d8e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d8e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_195, _220 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis for part in loop 5:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d868 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_195;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_195;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _220;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d8e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d8e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_195, _220 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ------>vectorizing SLP node starting from: t.D.136749._M_impl.D.136092._M_start = iftmp.14_195;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vect_is_simple_use: operand iftmp.14_195 + _522, type of def: internal
+/usr/include/c++/13/bits/vector.tcc:521:30: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/vector.tcc:521:30: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: t.D.136749._M_impl.D.136092._M_start
+/usr/include/c++/13/bits/vector.tcc:521:30: note: created &t
+/usr/include/c++/13/bits/vector.tcc:521:30: note: add new stmt: MEM <vector(2) long unsigned int> [(double * *)&t] = _157;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/vector.tcc:521:30: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/vector.tcc:521:30: missed: splitting region at dominance boundary bb37
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: not vectorized: statement can throw an exception: std::__throw_length_error ("vector::_M_realloc_insert");
+/usr/include/c++/13/bits/stl_vector.h:1899:24: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: splitting region at dominance boundary bb18
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 31
+code/bench.h:20:1: note: ***** Analysis failed with vector mode VOID
+code/bench.h:20:1: missed: splitting region at dominance boundary bb34
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: missed: splitting region at loop 5 exit at bb35
+code/bench.h:12:23: note: ***** Analysis failed with vector mode VOID
+code/bench.h:12:23: missed: splitting region at control altering definition _309 = operator new (_308);
+/usr/include/c++/13/bits/stl_algo.h:4861:18: missed: statement clobbers memory: std::__sort.isra (__first, __last);
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:62:57: missed: statement clobbers memory: non_vectorizable_example.constprop (_234, _232);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _234 : "memory");
+code/bench.h:13:49: missed: statement clobbers memory: t0 = std::chrono::_V2::steady_clock::now ();
+code/02_autovec.cpp:62:57: missed: statement clobbers memory: non_vectorizable_example.constprop (_238, _236);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _238 : "memory");
+code/bench.h:15:49: missed: statement clobbers memory: t1 = std::chrono::_V2::steady_clock::now ();
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _309 = operator new (_308);
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb52
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb43
+/usr/include/c++/13/bits/stl_uninitialized.h:1131:21: missed: statement clobbers memory: __builtin_memmove (iftmp.14_275, _291, _274);
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_291, _310);
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** Analysis succeeded with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:521:30: note: SLPing BB part
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Costing subgraph: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d8e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_275;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_275;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _707;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d7e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d7e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_275, _707 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis for part in loop 7:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d8e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_275;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_275;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _707;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d7e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d7e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_275, _707 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ------>vectorizing SLP node starting from: t.D.136749._M_impl.D.136092._M_start = iftmp.14_275;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vect_is_simple_use: operand iftmp.14_275 + _300, type of def: internal
+/usr/include/c++/13/bits/vector.tcc:521:30: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/vector.tcc:521:30: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: t.D.136749._M_impl.D.136092._M_start
+/usr/include/c++/13/bits/vector.tcc:521:30: note: created &t
+/usr/include/c++/13/bits/vector.tcc:521:30: note: add new stmt: MEM <vector(2) long unsigned int> [(double * *)&t] = _249;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/vector.tcc:521:30: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/vector.tcc:521:30: missed: splitting region at dominance boundary bb60
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: not vectorized: statement can throw an exception: std::__throw_length_error ("vector::_M_realloc_insert");
+/usr/include/c++/13/bits/stl_vector.h:1899:24: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: splitting region at dominance boundary bb41
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 32
+code/bench.h:20:1: note: ***** Analysis failed with vector mode VOID
+code/bench.h:20:1: missed: splitting region at dominance boundary bb57
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: missed: splitting region at loop 7 exit at bb58
+code/bench.h:12:23: note: ***** Analysis failed with vector mode VOID
+code/bench.h:12:23: missed: splitting region at control altering definition _389 = operator new (_388);
+/usr/include/c++/13/bits/stl_algo.h:4861:18: missed: statement clobbers memory: std::__sort.isra (__first, __last);
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:63:57: missed: statement clobbers memory: conditional_vectorizable.constprop (_314, _312);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _312 : "memory");
+code/bench.h:13:49: missed: statement clobbers memory: t0 = std::chrono::_V2::steady_clock::now ();
+code/02_autovec.cpp:63:57: missed: statement clobbers memory: conditional_vectorizable.constprop (_318, _316);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _316 : "memory");
+code/bench.h:15:49: missed: statement clobbers memory: t1 = std::chrono::_V2::steady_clock::now ();
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _389 = operator new (_388);
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb76
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb67
+/usr/include/c++/13/bits/stl_uninitialized.h:1131:21: missed: statement clobbers memory: __builtin_memmove (iftmp.14_355, _371, _354);
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_371, _390);
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** Analysis succeeded with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:521:30: note: SLPing BB part
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Costing subgraph: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d7e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_355;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_355;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _393;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d868
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d868 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_355, _393 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis for part in loop 9:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d7e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_355;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_355;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _393;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d868
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d868 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_355, _393 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ------>vectorizing SLP node starting from: t.D.136749._M_impl.D.136092._M_start = iftmp.14_355;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vect_is_simple_use: operand iftmp.14_355 + _507, type of def: internal
+/usr/include/c++/13/bits/vector.tcc:521:30: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/vector.tcc:521:30: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: t.D.136749._M_impl.D.136092._M_start
+/usr/include/c++/13/bits/vector.tcc:521:30: note: created &t
+/usr/include/c++/13/bits/vector.tcc:521:30: note: add new stmt: MEM <vector(2) long unsigned int> [(double * *)&t] = _329;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/vector.tcc:521:30: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/vector.tcc:521:30: missed: splitting region at dominance boundary bb84
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: not vectorized: statement can throw an exception: std::__throw_length_error ("vector::_M_realloc_insert");
+/usr/include/c++/13/bits/stl_vector.h:1899:24: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: splitting region at dominance boundary bb65
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 33
+code/bench.h:20:1: note: ***** Analysis failed with vector mode VOID
+code/bench.h:20:1: missed: splitting region at dominance boundary bb81
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: missed: splitting region at loop 9 exit at bb82
+code/bench.h:12:23: note: ***** Analysis failed with vector mode VOID
+code/bench.h:12:23: missed: splitting region at control altering definition _469 = operator new (_468);
+/usr/include/c++/13/bits/stl_algo.h:4861:18: missed: statement clobbers memory: std::__sort.isra (__first, __last);
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:65:54: missed: statement clobbers memory: conditional_restrict.constprop (_394, _392);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _392 : "memory");
+code/bench.h:13:49: missed: statement clobbers memory: t0 = std::chrono::_V2::steady_clock::now ();
+code/02_autovec.cpp:65:54: missed: statement clobbers memory: conditional_restrict.constprop (_398, _396);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _396 : "memory");
+code/bench.h:15:49: missed: statement clobbers memory: t1 = std::chrono::_V2::steady_clock::now ();
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _469 = operator new (_468);
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb100
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb91
+/usr/include/c++/13/bits/stl_uninitialized.h:1131:21: missed: statement clobbers memory: __builtin_memmove (iftmp.14_435, _451, _434);
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_451, _470);
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** Analysis succeeded with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:521:30: note: SLPing BB part
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Costing subgraph: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d868 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_435;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_435;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _172;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d8e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d8e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_435, _172 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis for part in loop 11:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d868 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_435;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_435;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _172;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d8e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d8e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_435, _172 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ------>vectorizing SLP node starting from: t.D.136749._M_impl.D.136092._M_start = iftmp.14_435;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vect_is_simple_use: operand iftmp.14_435 + _171, type of def: internal
+/usr/include/c++/13/bits/vector.tcc:521:30: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/vector.tcc:521:30: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: t.D.136749._M_impl.D.136092._M_start
+/usr/include/c++/13/bits/vector.tcc:521:30: note: created &t
+/usr/include/c++/13/bits/vector.tcc:521:30: note: add new stmt: MEM <vector(2) long unsigned int> [(double * *)&t] = _409;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/vector.tcc:521:30: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/vector.tcc:521:30: missed: splitting region at dominance boundary bb108
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: not vectorized: statement can throw an exception: std::__throw_length_error ("vector::_M_realloc_insert");
+/usr/include/c++/13/bits/stl_vector.h:1899:24: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: splitting region at dominance boundary bb89
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 34
+code/bench.h:20:1: note: ***** Analysis failed with vector mode VOID
+code/bench.h:20:1: missed: splitting region at dominance boundary bb105
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: missed: splitting region at loop 11 exit at bb106
+code/bench.h:12:23: note: ***** Analysis failed with vector mode VOID
+code/bench.h:12:23: missed: splitting region at control altering definition _549 = operator new (_548);
+/usr/include/c++/13/bits/stl_algo.h:4861:18: missed: statement clobbers memory: std::__sort.isra (__first, __last);
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:66:52: missed: statement clobbers memory: conditional_select.constprop (_474, _472);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _472 : "memory");
+code/bench.h:13:49: missed: statement clobbers memory: t0 = std::chrono::_V2::steady_clock::now ();
+code/02_autovec.cpp:66:52: missed: statement clobbers memory: conditional_select.constprop (_478, _476);
+code/bench.h:25:5: missed: statement clobbers memory: __asm__ __volatile__("" :  : "g" _476 : "memory");
+code/bench.h:15:49: missed: statement clobbers memory: t1 = std::chrono::_V2::steady_clock::now ();
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: not vectorized: statement can throw an exception: _549 = operator new (_548);
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb124
+/usr/include/c++/13/bits/new_allocator.h:151:48: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/new_allocator.h:151:48: missed: splitting region at dominance boundary bb115
+/usr/include/c++/13/bits/stl_uninitialized.h:1131:21: missed: statement clobbers memory: __builtin_memmove (iftmp.14_515, _531, _514);
+/usr/include/c++/13/bits/new_allocator.h:172:26: missed: statement clobbers memory: operator delete (_531, _550);
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** Analysis succeeded with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:521:30: note: SLPing BB part
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Costing subgraph: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d8e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_515;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_515;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _460;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d7e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d7e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_515, _460 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis: 
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Cost model analysis for part in loop 13:
+  Vector cost: 32
+  Scalar cost: 32
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Basic block will be vectorized using SLP
+/usr/include/c++/13/bits/vector.tcc:521:30: note: Vectorizing SLP tree:
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node 0x921d8e8 (max_nunits=2, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: op template: t.D.136749._M_impl.D.136092._M_start = iftmp.14_515;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 0 t.D.136749._M_impl.D.136092._M_start = iftmp.14_515;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	stmt 1 t.D.136749._M_impl.D.136092._M_finish = _460;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	children 0x921d7e8
+/usr/include/c++/13/bits/vector.tcc:521:30: note: node (external) 0x921d7e8 (max_nunits=1, refcnt=1) vector(2) long unsigned int
+/usr/include/c++/13/bits/vector.tcc:521:30: note: 	{ iftmp.14_515, _460 }
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ------>vectorizing SLP node starting from: t.D.136749._M_impl.D.136092._M_start = iftmp.14_515;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vect_is_simple_use: operand iftmp.14_515 + _361, type of def: internal
+/usr/include/c++/13/bits/vector.tcc:521:30: note: transform store. ncopies = 1
+/usr/include/c++/13/bits/vector.tcc:521:30: note: create vector_type-pointer variable to type: vector(2) long unsigned int  vectorizing a pointer ref: t.D.136749._M_impl.D.136092._M_start
+/usr/include/c++/13/bits/vector.tcc:521:30: note: created &t
+/usr/include/c++/13/bits/vector.tcc:521:30: note: add new stmt: MEM <vector(2) long unsigned int> [(double * *)&t] = _489;
+/usr/include/c++/13/bits/vector.tcc:521:30: note: vectorizing stmts using SLP.
+/usr/include/c++/13/bits/vector.tcc:521:30: optimized: basic block part vectorized using 32 byte vectors
+/usr/include/c++/13/bits/vector.tcc:521:30: note: ***** The result for vector mode V32QI would be the same
+/usr/include/c++/13/bits/vector.tcc:521:30: missed: splitting region at dominance boundary bb133
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: not vectorized: statement can throw an exception: std::__throw_length_error ("vector::_M_realloc_insert");
+/usr/include/c++/13/bits/stl_vector.h:1899:24: note: ***** Analysis failed with vector mode VOID
+/usr/include/c++/13/bits/stl_vector.h:1899:24: missed: splitting region at dominance boundary bb113
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 35
+code/bench.h:20:1: note: ***** Analysis failed with vector mode VOID
+code/bench.h:20:1: missed: splitting region at dominance boundary bb129
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Analysis failed with vector mode V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DF
+/usr/include/c++/13/bits/vector.tcc:119:6: missed: splitting region at loop 13 exit at bb130
+code/bench.h:12:23: note: ***** Analysis failed with vector mode VOID
+code/bench.h:12:23: missed: splitting region at dominance boundary bb147
+/usr/include/c++/13/bits/stl_algo.h:4861:18: missed: statement clobbers memory: std::__sort.isra (__first, __last);
+code/bench.h:20:1: missed: statement clobbers memory: std::vector<double>::~vector (&t);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: not vectorized: statement can throw an exception: __printf_chk (2, "\xd0\x9f\xd1\x80\xd0\xb8\xd0\xbc\xd0\xb5\xd1\x80                          \xd0\xbd\xd1\x81 \xd0\xbd\xd0\xb0 \xd1\x8d\xd0\xbb\xd0\xb5\xd0\xbc\xd0\xb5\xd0\xbd\xd1\x82\n");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: not vectorized: statement can throw an exception: __printf_chk (2, "1.  c[i] = a[i] + b[i]          %.3f\n", _5);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: not vectorized: statement can throw an exception: __printf_chk (2, "2.  a[i] = a[i-1] + b[i]        %.3f\n", _7);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: not vectorized: statement can throw an exception: __printf_chk (2, "3.  if (a[i] > 0) b[i] = a*a    %.3f\n", _9);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: not vectorized: statement can throw an exception: __printf_chk (2, "3\xd0\xb1. \xd1\x82\xd0\xbe \xd0\xb6\xd0\xb5 + __restrict__        %.3f\n", _11);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: not vectorized: statement can throw an exception: __printf_chk (2, "3\xd0\xb2. b[i] = a>0 ? a*a : b[i]     %.3f\n", _13);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: note: ***** Analysis failed with vector mode V4DI
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: splitting region at dominance boundary bb150
+code/02_autovec.cpp:74:1: missed: statement clobbers memory: std::vector<float>::~vector (&c);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 16
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb153
+code/02_autovec.cpp:74:1: missed: statement clobbers memory: std::vector<float>::~vector (&b);
+code/02_autovec.cpp:52:5: missed: not vectorized: statement can throw an exception: resx 11
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb145
+code/02_autovec.cpp:74:1: missed: statement clobbers memory: std::vector<float>::~vector (&a);
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb154
+code/02_autovec.cpp:74:1: missed: statement clobbers memory: std::vector<float>::~vector (&c);
+code/02_autovec.cpp:74:1: missed: statement clobbers memory: std::vector<float>::~vector (&b);
+code/02_autovec.cpp:74:1: missed: statement clobbers memory: std::vector<float>::~vector (&a);
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb155
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb156
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb157
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb158
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb159
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb160
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb161
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb162
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb163
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: missed: splitting region at dominance boundary bb176
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID
+code/02_autovec.cpp:74:1: note: ***** Analysis failed with vector mode VOID

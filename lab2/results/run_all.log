@@ -1,0 +1,108 @@
+=== 0. Окружение ===
+CPU(s):                                  4
+Model name:                              12th Gen Intel(R) Core(TM) i5-12450H
+L1d cache:                               96 KiB (2 instances)
+L2 cache:                                2.5 MiB (2 instances)
+L3 cache:                                12 MiB (1 instance)
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+NumPy 2.2.6 | SciPy 1.15.3 | Numba 0.67.0
+
+=== 1. Задача 1: умножение матриц ===
+src/matmul.cpp:37:28: optimized: loop vectorized using 16 byte vectors
+src/matmul.cpp:37:28: optimized: loop vectorized using 32 byte vectors
+src/matmul.cpp:57:22: optimized: loop vectorized using 16 byte vectors
+src/matmul.cpp:57:22: optimized: loop vectorized using 32 byte vectors
+src/matmul.cpp:76:44: optimized: loop vectorized using 16 byte vectors
+src/matmul.cpp:76:44: optimized: loop vectorized using 32 byte vectors
+src/matmul.cpp:76:44: optimized:  loop versioned for vectorization because of possible aliasing
+--- C++ (1 ядро)
+N,scalar_s,auto_s,avx2_s,blocked_s,scalar_gflops,auto_gflops,avx2_gflops,blocked_gflops,max_err
+256,0.005004,0.001054,0.001205,0.001547,6.71,31.83,27.84,21.69,0.0e+00
+512,0.038042,0.009090,0.010296,0.013060,7.06,29.53,26.07,20.55,0.0e+00
+1024,0.322775,0.085111,0.096621,0.115308,6.65,25.23,22.23,18.62,0.0e+00
+2048,3.545807,1.568893,2.004995,0.958350,4.85,10.95,8.57,17.93,0.0e+00
+--- Python (скалярный Python меряется до N=512, дальше оценка ~N^3)
+N,py_scalar_s,py_measured,numpy_s,numba_par_s,numba_1t_s,max_err
+256,3.721945,1,0.000103,0.000335,0.001292,6.9e-05
+512,30.274293,1,0.000720,0.007311,0.007019,2.0e-04
+1024,242.194340,0,0.006810,0.035245,0.092050,5.5e-04
+2048,1937.554722,0,0.071745,0.630453,1.941564,1.7e-03
+--- FP-инструкции:
+  matmul_scalar:   скаляр: 1, xmm: 0, ymm: 0
+  matmul_auto:     скаляр: 9, xmm: 3, ymm: 3
+  matmul_avx2:     скаляр: 3, xmm: 1, ymm: 2
+  matmul_blocked:  скаляр: 4, xmm: 1, ymm: 1
+
+=== 2. Задача 2: свёртка, ядро Гаусса 3x3 ===
+src/conv.cpp:92:36: optimized: loop vectorized using 16 byte vectors
+src/conv.cpp:92:36: optimized: loop vectorized using 32 byte vectors
+src/conv.cpp:178:32: optimized: loop vectorized using 16 byte vectors
+src/conv.cpp:178:32: optimized: loop vectorized using 32 byte vectors
+src/conv.cpp:189:31: optimized: loop vectorized using 16 byte vectors
+src/conv.cpp:189:31: optimized: loop vectorized using 32 byte vectors
+src/conv.cpp:207:13: optimized: basic block part vectorized using 32 byte vectors
+src/conv.cpp:211:27: optimized: loop vectorized using 8 byte vectors
+src/conv.cpp:211:27: optimized: loop vectorized using 16 byte vectors
+--- C++ (1 ядро)
+N,scalar_s,auto_s,auto_nobranch_s,avx2_s,separable_s,separable_vec_s,max_err
+512,0.001833,0.002164,0.000210,0.000200,0.000924,0.000178,1.8e-07
+1024,0.007273,0.008633,0.001175,0.000775,0.003830,0.001285,1.8e-07
+2048,0.028811,0.033080,0.004716,0.003613,0.015343,0.006330,1.8e-07
+4096,0.116166,0.133933,0.018540,0.014636,0.059786,0.027270,2.4e-07
+--- Python (скалярный Python меряется до N=2048, дальше оценка ~N^2)
+N,py_scalar_s,py_measured,scipy_s,numba_par_s,numba_1t_s,max_err
+512,0.758370,1,0.005400,0.000766,0.002985,1.8e-07
+1024,3.097163,1,0.021477,0.004077,0.011736,1.8e-07
+2048,12.424590,1,0.087446,0.014713,0.047534,2.4e-07
+4096,49.698361,0,0.352804,0.086949,0.204849,1.8e-07
+--- FP-инструкции:
+  convolve2d_scalar:         скаляр: 1, xmm: 0, ymm: 0
+  convolve2d_auto:           скаляр: 1, xmm: 0, ymm: 0
+  convolve2d_auto_nobranch:  скаляр: 3, xmm: 1, ymm: 1
+  convolve2d_avx2:           скаляр: 2, xmm: 0, ymm: 1
+  convolve1d_horizontal:     скаляр: 1, xmm: 0, ymm: 0
+  convolve1d_vertical:       скаляр: 1, xmm: 0, ymm: 0
+  convolve2d_separable_vec:  скаляр: 6, xmm: 2, ymm: 2
+
+=== 3. Индивидуальное задание (вариант 6): свёртка, ядро усреднения 7x7 ===
+--- C++ (1 ядро)
+N,scalar_s,auto_s,auto_nobranch_s,avx2_s,separable_s,separable_vec_s,max_err
+512,0.009457,0.009843,0.001020,0.000926,0.001796,0.000338,2.4e-07
+1024,0.038113,0.039537,0.003612,0.003500,0.007198,0.001936,3.6e-07
+2048,0.153746,0.180021,0.015188,0.013410,0.029759,0.008552,3.6e-07
+4096,0.617460,0.625067,0.063685,0.052986,0.115954,0.034017,3.6e-07
+--- Python (скалярный Python меряется до N=1024, дальше оценка ~N^2)
+N,py_scalar_s,py_measured,scipy_s,numba_par_s,numba_1t_s,max_err
+512,3.574289,1,0.017199,0.003528,0.012400,4.2e-07
+1024,14.668095,1,0.069307,0.014754,0.049047,4.2e-07
+2048,58.672379,0,0.278060,0.063302,0.188497,3.6e-07
+4096,234.689517,0,1.117825,0.265376,0.757271,3.0e-07
+
+=== 4. Задача 3: блочная обработка и выравнивание ===
+Свёртка 4096x4096, Гаусс 3x3, блок 256; адреса % 64: aligned=0, unaligned=4, vector=16
+версия                  мс   GFLOPS % пика ошибка
+frag17_blocked_vector       59.770     5.05     3.6%    0.0e+00
+frag16_blocked_aligned      58.814     5.13     3.6%    0.0e+00
+avx2_unaligned              10.079    29.96    21.3%    0.0e+00
+avx2_aligned                10.562    28.59    20.3%    0.0e+00
+avx2_blocked_unaligned      13.382    22.57    16.0%    0.0e+00
+avx2_blocked_aligned        13.260    22.77    16.2%    0.0e+00
+Свёртка 512x512, Гаусс 3x3, блок 256; адреса % 64: aligned=0, unaligned=4, vector=16
+версия                  мс   GFLOPS % пика ошибка
+frag17_blocked_vector        0.826     5.71     4.1%    0.0e+00
+frag16_blocked_aligned       0.865     5.46     3.9%    0.0e+00
+avx2_unaligned               0.084    56.31    40.0%    0.0e+00
+avx2_aligned                 0.073    64.46    45.8%    0.0e+00
+avx2_blocked_unaligned       0.089    52.90    37.6%    0.0e+00
+avx2_blocked_aligned         0.091    51.80    36.8%    0.0e+00
+--- Python, фрагмент 15
+Изображение 4096x4096: C-непрерывный = True, адрес % 64 = 16, адрес % 32 = 16
+SciPy целиком:         358.3 мс
+SciPy блоками 256:     381.1 мс  (0.94x), ошибка 0.0e+00
+--- Cachegrind (промахи кэша; perf в WSL2 недоступен)
+valgrind не установлен: sudo apt install valgrind, затем перезапустить этот скрипт
+
+=== 5. Графики ===
+Сохранено: results/fig_matmul.png
+Сохранено: results/fig_conv_gauss3.png
+Сохранено: results/fig_conv_box7.png

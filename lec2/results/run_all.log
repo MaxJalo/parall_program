@@ -1,0 +1,163 @@
+=== 00. Что умеет процессор и что включает -march=native ===
+Model name:                              12th Gen Intel(R) Core(TM) i5-12450H
+SIMD-флаги CPU: avx avx2 fma sse4_2 
+  -march=                     		alderlake
+  -mavx2                      		[enabled]
+  -mavx512f                   		[disabled]
+  -mfma                       		[enabled]
+  -mprefer-avx128             		-mprefer-vector-width=128
+  -mprefer-vector-width=      		none
+  Known preferred register vector length (to use with the -mprefer-vector-width= option):
+  Known valid arguments for -march= option:
+Счётчики PMU (fp_arith_inst_retired): breakpoint kprobe msr power software tracepoint uprobe  — аппаратного cpu нет, perf недоступен
+
+=== 01. Ширина SIMD-регистров и Амдал для SIMD ===
+Регистр  W, бит  FP32  FP64  INT8
+__m128      128     4     2    16
+__m256      256     8     4    32
+
+Амдал для SIMD, k = 8 (AVX2, FP32)
+   p     S     доля пика
+0.500   1.78    22.2 %
+0.800   3.33    41.7 %
+0.900   4.71    58.8 %
+0.950   5.93    74.1 %
+0.964   6.39    79.9 %
+0.990   7.48    93.5 %
+1.000   8.00   100.0 %
+
+Для 80 % пика нужно p >= 0.964
+
+=== 02. Авто-векторизация: примеры 1–3 ===
+code/02_autovec.cpp:11:26: optimized: loop vectorized using 16 byte vectors
+code/02_autovec.cpp:11:26: optimized: loop vectorized using 32 byte vectors
+code/02_autovec.cpp:19:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _4 = *_3;
+code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _6 = *_5;
+code/02_autovec.cpp:27:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:27:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:37:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:37:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:47:26: missed: couldn't vectorize loop
+code/02_autovec.cpp:47:26: missed: not vectorized: control flow in loop.
+--- отчёт с -fno-trapping-math (примеры 3, 3б, 3в):
+code/02_autovec.cpp:27:26: optimized: loop vectorized using 32 byte vectors
+code/02_autovec.cpp:37:26: optimized: loop vectorized using 32 byte vectors
+code/02_autovec.cpp:47:26: optimized: loop vectorized using 32 byte vectors
+--- -O3 -march=native
+Пример                          нс на элемент
+1.  c[i] = a[i] + b[i]          0.071
+2.  a[i] = a[i-1] + b[i]        0.507
+3.  if (a[i] > 0) b[i] = a*a    0.394
+3б. то же + __restrict__        0.389
+3в. b[i] = a>0 ? a*a : b[i]     0.385
+--- -O3 -march=native -fno-tree-vectorize
+Пример                          нс на элемент
+1.  c[i] = a[i] + b[i]          0.254
+2.  a[i] = a[i-1] + b[i]        0.501
+3.  if (a[i] > 0) b[i] = a*a    0.391
+3б. то же + __restrict__        0.387
+3в. b[i] = a>0 ? a*a : b[i]     0.389
+--- -O3 -march=native -fno-trapping-math
+Пример                          нс на элемент
+1.  c[i] = a[i] + b[i]          0.072
+2.  a[i] = a[i-1] + b[i]        0.502
+3.  if (a[i] > 0) b[i] = a*a    0.086
+3б. то же + __restrict__        0.083
+3в. b[i] = a>0 ? a*a : b[i]     0.077
+--- FP-инструкции в vectorizable_example:
+  с векторизацией:  скалярных: 0, xmm (128 бит): 0, ymm (256 бит): 1
+  без векторизации: скалярных: 1, xmm (128 бит): 0, ymm (256 бит): 0
+
+=== 03. Прагмы и omp declare simd ===
+code/03_pragmas.cpp:11:26: optimized:  loop versioned for vectorization because of possible aliasing
+code/03_pragmas.cpp:11:26: optimized: loop vectorized using 16 byte vectors
+code/03_pragmas.cpp:11:26: optimized: loop vectorized using 32 byte vectors
+code/03_pragmas.cpp:17:22: optimized: loop vectorized using 16 byte vectors
+code/03_pragmas.cpp:17:22: optimized: loop vectorized using 32 byte vectors
+--- без -ffast-math
+Функция                          нс на элемент
+scale без подсказок              0.052
+scale + #pragma GCC ivdep        0.052
+scale, векторизация отключена    0.227
+sin: omp declare simd            2.289
+sin: скалярный                   2.274
+--- с -ffast-math
+Функция                          нс на элемент
+scale без подсказок              0.054
+scale + #pragma GCC ivdep        0.052
+scale, векторизация отключена    0.257
+sin: omp declare simd            0.304
+sin: скалярный                   2.241
+Векторные клоны sin/transform в бинарнике: _ZGVbN4v_sinf _ZGVbN4vu__Z9transformff _ZGVcN8vu__Z9transformff _ZGVdN8v_sinf _ZGVdN8vu__Z9transformff _ZGVeN16v_sinf _ZGVeN16vu__Z9transformff 
+
+=== 04. Intrinsics: add_avx2, fma_avx2 ===
+add_avx2: макс. отличие от скалярной версии = 0
+fma_avx2: макс. отличие = 0 (последний элемент 6147.000)
+
+Версия            нс/элемент  ускорение
+скалярная         0.259       1.00x
+авто-векторизация 0.083       3.12x
+add_avx2          0.079       3.28x
+fma_avx2          0.075       3.48x
+
+=== 05. std::experimental::simd ===
+native_simd<float>::size() = 8 (ширина регистра 256 бит)
+
+dot: simd = 4096.0, скалярно = 4096.0 (ожидается 4096)
+threshold(1.0): 0 5 0 7 0 4 0 2 
+
+dot скалярный: 0.500 нс/элемент
+dot std::simd: 0.056 нс/элемент (8.9x)
+
+=== 06. Выравнивание ===
+Способ                          адрес % 64
+std::aligned_alloc(32, ...)     32
+struct alignas(64)              0
+posix_memalign(64)              0
+_mm_malloc(64)                  0
+vector + AlignedAllocator<64>   0
+обычный std::vector             16
+malloc + 4 байта                36
+
+assume_aligned<64>: сумма = 1024
+
+Размер     load, ГБ/с  loadu+0, ГБ/с  loadu+4Б, ГБ/с  split-штраф
+16      КБ    227.3         228.3          195.1       1.17x
+256     КБ    155.6         154.6           88.4       1.76x
+4096    КБ     58.1          56.0           52.4       1.11x
+262144  КБ     15.3          15.2           14.6       1.05x
+
+=== 07. Свёртка 4096x4096, ядро 3x3 ===
+--- -O3 -march=native
+Свёртка 4096x4096, ядро 3x3, FP32
+Реализация          Время, мс  GFLOPS  Ускорение  Макс. ошибка
+скалярная               27.2   11.09      1.00x  —
+авто-вект. (лекция)    102.4    2.95      0.27x  0.0e+00
+авто-вект. по строкам   19.2   15.75      1.42x  0.0e+00
+intrinsics AVX2         10.9   27.59      2.49x  0.0e+00
+--- -O0 (как «без оптимизации» в лекции)
+Свёртка 4096x4096, ядро 3x3, FP32
+Реализация          Время, мс  GFLOPS  Ускорение  Макс. ошибка
+скалярная              301.0    1.00      1.00x  —
+авто-вект. (лекция)    324.2    0.93      0.93x  0.0e+00
+авто-вект. по строкам  197.6    1.53      1.52x  0.0e+00
+intrinsics AVX2         67.4    4.48      4.47x  0.0e+00
+
+=== 08. Микро-ядро умножения матриц 6x8 (FP64) ===
+Микро-ядро 6x8, k = 256, FP64; макс. отличие от наивного = 4.0e-15
+Пик FP64 одного P-ядра: 70.4 GFLOPS (16 FLOP/такт)
+
+Версия         GFLOPS   FLOP/такт @4.4ГГц   доля пика
+наивная    4.74      1.08              6.7 %
+микро-ядро   63.91     14.53             90.8 %
+
+=== 09. AVX-512 маски (только ассемблер, на этом CPU не запустить) ===
+      1 	vmovups	zmm3, ZMMWORD PTR -64[rdi+rax*4]
+      1 	vmovups	zmm1, ZMMWORD PTR [rdi+r11*4]
+      1 	vmovups	zmm0, ZMMWORD PTR [rsi+r11*4]
+      1 	vmovups	ZMMWORD PTR [r8]{k1}, zmm0
+      1 	vmovups	ZMMWORD PTR -64[rdi+rax*4], zmm2
+      1 	vminps	zmm2, zmm2, zmm1
+      1 	vmaxps	zmm2, zmm3, zmm0
+      1 	vbroadcastss	zmm1, xmm1

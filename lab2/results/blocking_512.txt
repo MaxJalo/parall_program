@@ -1,0 +1,8 @@
+Свёртка 512x512, Гаусс 3x3, блок 256; адреса % 64: aligned=0, unaligned=4, vector=16
+версия                  мс   GFLOPS % пика ошибка
+frag17_blocked_vector        0.826     5.71     4.1%    0.0e+00
+frag16_blocked_aligned       0.865     5.46     3.9%    0.0e+00
+avx2_unaligned               0.084    56.31    40.0%    0.0e+00
+avx2_aligned                 0.073    64.46    45.8%    0.0e+00
+avx2_blocked_unaligned       0.089    52.90    37.6%    0.0e+00
+avx2_blocked_aligned         0.091    51.80    36.8%    0.0e+00

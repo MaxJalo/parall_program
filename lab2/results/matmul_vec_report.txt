@@ -1,0 +1,7 @@
+src/matmul.cpp:37:28: optimized: loop vectorized using 16 byte vectors
+src/matmul.cpp:37:28: optimized: loop vectorized using 32 byte vectors
+src/matmul.cpp:57:22: optimized: loop vectorized using 16 byte vectors
+src/matmul.cpp:57:22: optimized: loop vectorized using 32 byte vectors
+src/matmul.cpp:76:44: optimized: loop vectorized using 16 byte vectors
+src/matmul.cpp:76:44: optimized: loop vectorized using 32 byte vectors
+src/matmul.cpp:76:44: optimized:  loop versioned for vectorization because of possible aliasing

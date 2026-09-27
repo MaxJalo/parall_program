@@ -1,0 +1,5 @@
+-O0;16.312
+-O2;4.748
+-O3;4.474
+-O3 -march=native;4.888
+-O3 -march=native -ffast-math;2.304
