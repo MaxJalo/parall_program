@@ -1,12 +1,11 @@
 	.file	"dot_asm.cpp"
 	.intel_syntax noprefix
 	.text
-	.globl	_Z17dot_product_basicPKfS0_i
-	.type	_Z17dot_product_basicPKfS0_i, @function
-_Z17dot_product_basicPKfS0_i:
+	.globl	"_Z17dot_product_basicPKfS0_i"
+	.type	"_Z17dot_product_basicPKfS0_i", @function
+"_Z17dot_product_basicPKfS0_i":
 .LFB0:
 	.cfi_startproc
-	endbr64
 	push	rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -47,13 +46,12 @@ _Z17dot_product_basicPKfS0_i:
 	ret
 	.cfi_endproc
 .LFE0:
-	.size	_Z17dot_product_basicPKfS0_i, .-_Z17dot_product_basicPKfS0_i
-	.globl	_Z20dot_product_restrictPKfS0_i
-	.type	_Z20dot_product_restrictPKfS0_i, @function
-_Z20dot_product_restrictPKfS0_i:
+	.size	"_Z17dot_product_basicPKfS0_i", .-"_Z17dot_product_basicPKfS0_i"
+	.globl	"_Z20dot_product_restrictPKfS0_i"
+	.type	"_Z20dot_product_restrictPKfS0_i", @function
+"_Z20dot_product_restrictPKfS0_i":
 .LFB1:
 	.cfi_startproc
-	endbr64
 	push	rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
@@ -94,22 +92,6 @@ _Z20dot_product_restrictPKfS0_i:
 	ret
 	.cfi_endproc
 .LFE1:
-	.size	_Z20dot_product_restrictPKfS0_i, .-_Z20dot_product_restrictPKfS0_i
-	.ident	"GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+	.size	"_Z20dot_product_restrictPKfS0_i", .-"_Z20dot_product_restrictPKfS0_i"
+	.ident	"GCC: (GNU) 16.2.1 20260810"
 	.section	.note.GNU-stack,"",@progbits
-	.section	.note.gnu.property,"a"
-	.align 8
-	.long	1f - 0f
-	.long	4f - 1f
-	.long	5
-0:
-	.string	"GNU"
-1:
-	.align 8
-	.long	0xc0000002
-	.long	3f - 2f
-2:
-	.long	0x3
-3:
-	.align 8
-4:

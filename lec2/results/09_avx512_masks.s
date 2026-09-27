@@ -2,112 +2,99 @@
 	.intel_syntax noprefix
 	.text
 	.p2align 4
-	.globl	_Z17masked_add_avx512PKfS0_PfPKbm
-	.type	_Z17masked_add_avx512PKfS0_PfPKbm, @function
-_Z17masked_add_avx512PKfS0_PfPKbm:
-.LFB6454:
+	.globl	"_Z17masked_add_avx512PKfS0_PfPKbm"
+	.type	"_Z17masked_add_avx512PKfS0_PfPKbm", @function
+"_Z17masked_add_avx512PKfS0_PfPKbm":
+.LFB7345:
 	.cfi_startproc
-	endbr64
+	mov	r9, rcx
 	cmp	r8, 15
-	jbe	.L10
-	push	rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	mov	rax, rcx
-	xor	r11d, r11d
-	mov	r10d, 1
-	mov	rbp, rsp
-	.cfi_def_cfa_register 6
-	push	rbx
-	.cfi_offset 3, -24
-	mov	rbx, r8
-	mov	r8, rdx
-	.p2align 4,,10
+	jbe	.L5
+	vmovdqa	xmm5, XMMWORD PTR .LC0[rip]
+	mov	eax, 16
+	vmovdqa	xmm4, XMMWORD PTR .LC1[rip]
+	vpxor	xmm3, xmm3, xmm3
+	.p2align 4
 	.p2align 3
-.L5:
-	vmovups	zmm1, ZMMWORD PTR [rdi+r11*4]
-	vmovups	zmm0, ZMMWORD PTR [rsi+r11*4]
-	xor	ecx, ecx
-	xor	edx, edx
-	.p2align 4,,10
-	.p2align 3
-.L4:
-	cmp	BYTE PTR [rax+rcx], 0
-	je	.L3
-	mov	r9d, r10d
-	sal	r9d, cl
-	or	edx, r9d
 .L3:
-	add	rcx, 1
-	cmp	rcx, 16
-	jne	.L4
-	vaddps	zmm0, zmm0, zmm1
-	kmovw	k1, edx
-	lea	rdx, 16[r11]
-	add	r11, 32
+	vpcmpeqb	xmm1, xmm3, XMMWORD PTR -16[r9+rax]
+	vmovups	zmm2, ZMMWORD PTR -64[rsi+rax*4]
+	vaddps	zmm2, zmm2, ZMMWORD PTR -64[rdi+rax*4]
 	add	rax, 16
-	vmovups	ZMMWORD PTR [r8]{k1}, zmm0
-	add	r8, 64
-	cmp	rbx, r11
-	jb	.L14
-	mov	r11, rdx
-	jmp	.L5
-.L14:
+	vpternlogd	zmm1, zmm1, zmm1, 0x55
+	vpmovsxbw	xmm0, xmm1
+	vpsrldq	xmm1, xmm1, 8
+	vpmovsxbw	xmm1, xmm1
+	vpand	xmm1, xmm1, xmm4
+	vpternlogd	zmm0, zmm5, zmm1, 234
+	vpsrldq	xmm1, xmm0, 8
+	vpor	xmm0, xmm0, xmm1
+	vpsrldq	xmm1, xmm0, 4
+	vpor	xmm0, xmm0, xmm1
+	vpsrldq	xmm1, xmm0, 2
+	vpor	xmm0, xmm0, xmm1
+	vpextrw	ecx, xmm0, 0
+	kmovw	k1, ecx
+	vmovups	ZMMWORD PTR [rdx]{k1}, zmm2
+	add	rdx, 64
+	cmp	r8, rax
+	jnb	.L3
 	vzeroupper
-	mov	rbx, QWORD PTR -8[rbp]
-	leave
-	.cfi_def_cfa 7, 8
-	ret
-.L10:
-	.cfi_restore 3
-	.cfi_restore 6
+.L5:
 	ret
 	.cfi_endproc
-.LFE6454:
-	.size	_Z17masked_add_avx512PKfS0_PfPKbm, .-_Z17masked_add_avx512PKfS0_PfPKbm
+.LFE7345:
+	.size	"_Z17masked_add_avx512PKfS0_PfPKbm", .-"_Z17masked_add_avx512PKfS0_PfPKbm"
 	.p2align 4
-	.globl	_Z12clamp_avx512Pfffm
-	.type	_Z12clamp_avx512Pfffm, @function
-_Z12clamp_avx512Pfffm:
-.LFB6455:
+	.globl	"_Z12clamp_avx512Pfffm"
+	.type	"_Z12clamp_avx512Pfffm", @function
+"_Z12clamp_avx512Pfffm":
+.LFB7346:
 	.cfi_startproc
-	endbr64
+	cmp	rsi, 15
+	jbe	.L11
+	shr	rsi, 4
 	vbroadcastss	zmm0, xmm0
 	vbroadcastss	zmm1, xmm1
-	cmp	rsi, 15
-	jbe	.L19
-	mov	eax, 16
-	.p2align 4,,10
+	sal	rsi, 6
+	lea	rax, [rsi+rdi]
+	.p2align 5
+	.p2align 4
 	.p2align 3
-.L17:
-	vmovups	zmm3, ZMMWORD PTR -64[rdi+rax*4]
-	vmaxps	zmm2, zmm3, zmm0
+.L9:
+	vmovups	zmm2, ZMMWORD PTR [rdi]
+	add	rdi, 64
+	vmaxps	zmm2, zmm2, zmm0
 	vminps	zmm2, zmm2, zmm1
-	vmovups	ZMMWORD PTR -64[rdi+rax*4], zmm2
-	add	rax, 16
-	cmp	rsi, rax
-	jnb	.L17
-.L19:
+	vmovups	ZMMWORD PTR -64[rdi], zmm2
+	cmp	rdi, rax
+	jne	.L9
 	vzeroupper
+.L11:
 	ret
 	.cfi_endproc
-.LFE6455:
-	.size	_Z12clamp_avx512Pfffm, .-_Z12clamp_avx512Pfffm
-	.ident	"GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+.LFE7346:
+	.size	"_Z12clamp_avx512Pfffm", .-"_Z12clamp_avx512Pfffm"
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align 16
+.LC0:
+	.value	1
+	.value	2
+	.value	4
+	.value	8
+	.value	16
+	.value	32
+	.value	64
+	.value	128
+	.align 16
+.LC1:
+	.value	256
+	.value	512
+	.value	1024
+	.value	2048
+	.value	4096
+	.value	8192
+	.value	16384
+	.value	-32768
+	.ident	"GCC: (GNU) 16.2.1 20260810"
 	.section	.note.GNU-stack,"",@progbits
-	.section	.note.gnu.property,"a"
-	.align 8
-	.long	1f - 0f
-	.long	4f - 1f
-	.long	5
-0:
-	.string	"GNU"
-1:
-	.align 8
-	.long	0xc0000002
-	.long	3f - 2f
-2:
-	.long	0x3
-3:
-	.align 8
-4:

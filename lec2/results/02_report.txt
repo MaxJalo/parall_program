@@ -1,11 +1,10 @@
-code/02_autovec.cpp:11:26: optimized: loop vectorized using 16 byte vectors
-code/02_autovec.cpp:11:26: optimized: loop vectorized using 32 byte vectors
+code/02_autovec.cpp:11:26: optimized: loop vectorized using 32 byte vectors and unroll factor 8
 code/02_autovec.cpp:19:26: missed: couldn't vectorize loop
-code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _4 = *_3;
+code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _3 = *_2;
 code/02_autovec.cpp:20:23: missed: not vectorized: no vectype for stmt: _6 = *_5;
 code/02_autovec.cpp:27:26: missed: couldn't vectorize loop
-code/02_autovec.cpp:27:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:27:26: missed: not vectorized: unsupported control flow in loop.
 code/02_autovec.cpp:37:26: missed: couldn't vectorize loop
-code/02_autovec.cpp:37:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:37:26: missed: not vectorized: unsupported control flow in loop.
 code/02_autovec.cpp:47:26: missed: couldn't vectorize loop
-code/02_autovec.cpp:47:26: missed: not vectorized: control flow in loop.
+code/02_autovec.cpp:47:26: missed: not vectorized: unsupported control flow in loop.

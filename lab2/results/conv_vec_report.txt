@@ -1,9 +1,8 @@
-src/conv.cpp:92:36: optimized: loop vectorized using 16 byte vectors
-src/conv.cpp:92:36: optimized: loop vectorized using 32 byte vectors
-src/conv.cpp:178:32: optimized: loop vectorized using 16 byte vectors
-src/conv.cpp:178:32: optimized: loop vectorized using 32 byte vectors
-src/conv.cpp:189:31: optimized: loop vectorized using 16 byte vectors
-src/conv.cpp:189:31: optimized: loop vectorized using 32 byte vectors
-src/conv.cpp:207:13: optimized: basic block part vectorized using 32 byte vectors
-src/conv.cpp:211:27: optimized: loop vectorized using 8 byte vectors
-src/conv.cpp:211:27: optimized: loop vectorized using 16 byte vectors
+src/conv.cpp:92:36: optimized: epilogue loop vectorized using 16 byte vectors and unroll factor 4
+src/conv.cpp:92:36: optimized: loop vectorized using 32 byte vectors and unroll factor 8
+src/conv.cpp:178:32: optimized: epilogue loop vectorized using 16 byte vectors and unroll factor 4
+src/conv.cpp:178:32: optimized: loop vectorized using 32 byte vectors and unroll factor 8
+src/conv.cpp:189:31: optimized: epilogue loop vectorized using 16 byte vectors and unroll factor 4
+src/conv.cpp:189:31: optimized: loop vectorized using 32 byte vectors and unroll factor 8
+src/conv.cpp:211:27: optimized: epilogue loop vectorized using 8 byte vectors and unroll factor 2
+src/conv.cpp:211:27: optimized: loop vectorized using 16 byte vectors and unroll factor 4
